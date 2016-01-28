@@ -695,7 +695,7 @@ CREATE INDEX %s ON %s(%s); -- hashes(obsoleted_hash)
             | Get (guid, prop, cont) ->
                 retrieve db guid prop |> (cont >> (runLoop db inTransaction))
             | Put ((guid, prop, value, meta, obsoletes), cont) ->
-                let a = runInTransaction db inTransaction (Return (addFact db guid prop value meta obsoletes))
+                let a = runInTransaction db inTransaction (Atomically (Return (), (fun _ -> Return (addFact db guid prop value meta obsoletes))))
                 (cont a |> (runLoop db inTransaction))
             | GetHashKey (searchKey, cont) ->
                 retrieveHashKey db searchKey |> (cont >> (runLoop db inTransaction))
