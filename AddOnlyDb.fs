@@ -10,7 +10,6 @@ module AddOnlyDb =
     open Active.Net // Guid, Hash, Text
     open Active.Net.FuncUtils // swap, constantly
     open Active.Net.Log
-    open Active.Net.Logging
 
     let private logger = getLogger "Active.Net.Database.AddOnlyDb"
 
