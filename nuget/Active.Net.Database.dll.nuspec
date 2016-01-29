@@ -21,6 +21,6 @@
     </dependencies>
   </metadata>
   <files>
-  	<file src="../bin/Debug/Active.Net.Database.dll" target="lib/net45"/>
+  	<file src="C:\ext1\Active.Net.AddOnlyDb\bin\Debug\Active.Net.Database.dll" target="lib/net45"/>
   </files>
 </package>
