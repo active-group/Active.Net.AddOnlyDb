@@ -2,24 +2,30 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Active.Net.AddOnlyDb</id>
-        <version>0.5</version>
+        <version>0.5.1</version>
         <authors>Andreas Bernauer,Michael Sperber</authors>
         <owners>Active Group</owners>
         <licenseUrl>https://www.eclipse.org/legal/epl-v10.html</licenseUrl>
         <projectUrl>https://github.com/active-group/Active.Net.AddOnlyDb</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Simple syncable key-value database, based on SQLite</description>
-        <releaseNotes>Now with debug symbols</releaseNotes>
+        <releaseNotes>Fix dependencies</releaseNotes>
         <copyright>Copyright 2015 Active Group GmbH</copyright>
-        <tags>FSharp SQLite Key-Value-Database Database</tags>
+        <tags>.NET FSharp SQLite Key-Value-Database Database Synchronization</tags>
         <dependencies>
-            <dependency id="Active.Net.Async" version="0.1" />
-            <dependency id="Active.Net.Data" version="0.1" />
+            <dependency id="FsCheck" version="2.0.4" />
+            <dependency id="FsCheck.Nunit" version="2.0.4" />
+            <dependency id="FSharp.Data" version="2.1.1" />
+            <dependency id="FSharpx.Async" version="1.12.0" />
+            <dependency id="FSharpx.Core" version="1.8.41" />
+            <dependency id="FSharpx.Extras" version="1.10.2" />
+            <dependency id="FsPickler" version="1.3.6" />
+            <dependency id="FsUnit" version="1.3.0.1" />
             <dependency id="NLog" version="4.1.1" />
         </dependencies>
     </metadata>
     <files>
         <file src="lib\net45\Active.Net.Database.dll" target="lib\net45\Active.Net.Database.dll" />
-        <file src="lib\net45\Active.Net.Database.pdb" target="lib\net45\Active.Net.Database.pdb" />
+        <file src="..\obj\Debug\Active.Net.Database.pdb" target="lib\net45\Active.Net.Database.pdb" />
     </files>
 </package>
