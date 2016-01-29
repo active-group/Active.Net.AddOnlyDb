@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Active.Net.AddOnlyDb</id>
+        <version>0.5</version>
+        <authors>Andreas Bernauer,Michael Sperber</authors>
+        <owners>Active Group</owners>
+        <licenseUrl>https://www.eclipse.org/legal/epl-v10.html</licenseUrl>
+        <projectUrl>https://github.com/active-group/Active.Net.AddOnlyDb</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Simple syncable key-value database, based on SQLite</description>
+        <releaseNotes>Now with debug symbols</releaseNotes>
+        <copyright>Copyright 2015 Active Group GmbH</copyright>
+        <tags>FSharp SQLite Key-Value-Database Database</tags>
+        <dependencies>
+            <dependency id="Active.Net.Async" version="0.1" />
+            <dependency id="Active.Net.Data" version="0.1" />
+            <dependency id="NLog" version="4.1.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="lib\net45\Active.Net.Database.dll" target="lib\net45\Active.Net.Database.dll" />
+        <file src="lib\net45\Active.Net.Database.pdb" target="lib\net45\Active.Net.Database.pdb" />
+    </files>
+</package>
